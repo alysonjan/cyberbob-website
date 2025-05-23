@@ -1,6 +1,6 @@
 import React from "react";
-import { AiOutlineDownload } from "react-icons/ai";
-import myResume from "../../data/Alyson_Urriza_Jan2025.pdf";
+// import { AiOutlineDownload } from "react-icons/ai";
+// import myResume from "../../data/Alyson_Urriza_Jan2025.pdf";
 import {
   ButtonContainer,
   Description,
@@ -11,7 +11,7 @@ import {
   Img,
   Name,
   NameContainer,
-  ResumeButton,
+  // ResumeButton,
   WorkContainer,
   WorkTitle,
 } from "./heroSyles";
