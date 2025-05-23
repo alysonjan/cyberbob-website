@@ -123,7 +123,7 @@ export const ProjectInfo = {
 
 export const ContactInfo = {
   id: "contact",
-  title: "GET IN TOUCH",
+  title: "CONTACT",
   email: "joshuapiesta@gmail.com",
   emailLogo: require("../images/email.png"),
   socials: [

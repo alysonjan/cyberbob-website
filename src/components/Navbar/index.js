@@ -27,81 +27,81 @@ const Navbar = ({ toggle }) => {
   }, []);
 
   const toggleHome = () => {
-    scroll.scrollToTop()
+    scroll.scrollToTop();
   };
   return (
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav scrollNav={scrollNav}>
-          <NavbarContainer>
-            <MobileIcon onClick={toggle}>
-              <FaBars />
-            </MobileIcon>
-            <NavMenu>
-              <NavItem>
-                <NavLinks
-                  to="/"
-                  onClick={toggleHome}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Home
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-150}
-                >
-                  About me
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="skills"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-150}
-                >
-                  Skills
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="projects"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-150}
-                >
-                  Projects
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                 to="contact"
-                 smooth={true}
-                 duration={500}
-                 spy={true}
-                 exact="true"
-                 offset={-150}
-                >
-                  Contact
-                </NavLinks>
-              </NavItem>
-            </NavMenu>
-          </NavbarContainer>
-        </Nav>
-      </IconContext.Provider>
+    <IconContext.Provider value={{ color: "#fff" }}>
+      <Nav scrollNav={scrollNav}>
+        <NavbarContainer>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLinks
+                to="/"
+                onClick={toggleHome}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Home
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-150}
+              >
+                About me
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="skills"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-150}
+              >
+                Platforms
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="projects"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-150}
+              >
+                Certificates
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="contact"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-150}
+              >
+                Contact
+              </NavLinks>
+            </NavItem>
+          </NavMenu>
+        </NavbarContainer>
+      </Nav>
+    </IconContext.Provider>
   );
 };
 
