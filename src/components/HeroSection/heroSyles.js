@@ -41,6 +41,10 @@ export const HeroContainer = styled.div`
   justify-content: center; /* Center content vertically */
   background: rgba(10, 15, 15, 0.85); /* Slightly more transparent */
   padding-top: 60px; /* Offset for fixed navbar */
+
+  @media screen and (max-width: 768px) {
+    padding-top: 80px; /* More space for the absolute navbar */
+  }
 `;
 
 export const HeroWrapper = styled.div`
@@ -71,7 +75,11 @@ export const Name = styled.h3`
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 2rem;
   }
 `;
 
@@ -91,7 +99,7 @@ export const WorkTitle = styled.div`
   letter-spacing: 2px;
 
     @media screen and (max-width: 480px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `;
 

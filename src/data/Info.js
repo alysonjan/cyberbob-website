@@ -91,6 +91,20 @@ export const ProjectInfo = {
   title: "CERTIFICATIONS",
   projects: [
     {
+      img: require("../images/pwpa.png"),
+      title: "PWPA: Practical Web Pentest Associate",
+      description:
+        "Certified by TCM Security in practical web application penetration testing. Demonstrated proficiency in identifying and exploiting web-based vulnerabilities through hands-on assessments.",
+      stack: ["Web Pentesting", "OWASP Top 10", "TCM Security"],
+    },
+    {
+      img: require("../images/cwes.png"),
+      title: "HTB: Certified Web Exploitation Specialist",
+      description:
+        "Achieved HackTheBox certification for advanced web exploitation techniques. Mastery in bypassing complex security controls and exploiting severe web vulnerabilities.",
+      stack: ["Web Exploitation", "Advanced Attacks", "HackTheBox"],
+    },
+    {
       img: require("../images/ceh.png"),
       title: "CEH: Certified Ethical Hacker",
       description:
