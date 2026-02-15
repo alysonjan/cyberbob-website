@@ -91,7 +91,7 @@ export const ProjectInfo = {
   title: "CERTIFICATIONS",
   projects: [
     {
-      img: require("../images/ech.png"),
+      img: require("../images/ceh.png"),
       title: "CEH: Certified Ethical Hacker",
       description:
         "Mastered advanced attack vectors and countermeasures. Validated proficiency in scanning, enumeration, and system hacking to secure perimeters.",

@@ -8,36 +8,8 @@ import {
   SkillWrapper,
   SkillTitle,
   SkillDescription,
+  SkillImage,
 } from "./skillsStyles";
-import {
-  Terminal,
-  Box,
-  ShieldCheck,
-  Globe,
-  FlaskConical,
-  ShieldAlert,
-  Server,
-  Crosshair,
-  Cpu
-} from "lucide-react";
-
-const getIcon = (name) => {
-  const lowerName = name.toLowerCase();
-
-  if (lowerName.includes("tryhackme")) return <Terminal size={40} color="#00FF41" />;
-  if (lowerName.includes("hackthebox")) return <Box size={40} color="#00FF41" />;
-  if (lowerName.includes("tcm")) return <ShieldCheck size={40} color="#00FF41" />;
-  if (lowerName.includes("web security")) return <Globe size={40} color="#00FF41" />;
-
-  if (lowerName.includes("pentesterlab")) return <FlaskConical size={40} color="#00FF41" />;
-  if (lowerName.includes("letsdefend")) return <ShieldAlert size={40} color="#00FF41" />;
-
-  if (lowerName.includes("blue team")) return <Server size={40} color="#00FF41" />;
-  if (lowerName.includes("cyberdefenders")) return <Crosshair size={40} color="#00FF41" />;
-
-  return <Cpu size={40} color="#00FF41" />;
-};
-
 
 const SkillsSection = ({ id, title, frontend, api, backend }) => {
   // Merge all platforms into a single array for consistent alignment
@@ -60,7 +32,7 @@ const SkillsSection = ({ id, title, frontend, api, backend }) => {
           return (
             <SkillWrapper key={index}>
               <SkillImageContainer>
-                {getIcon(item.name || "")}
+                <SkillImage src={item.img} alt={item.name} />
               </SkillImageContainer>
               <SkillTitle>{item.name}</SkillTitle>
               <SkillDescription>{item.description}</SkillDescription>

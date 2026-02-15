@@ -17,17 +17,21 @@ export const ProjectContainer = styled.div`
 
 export const ProjectWrapper = styled.div`
   width: 30rem;
-  height: 24.188rem;
+  height: 25rem; /* Adjusted height for images */
   border-radius: 1.563rem;
   background: #0e1a1a;
   margin: 0.25rem 0.25rem 1.25rem 0.25rem;
-  padding: 1rem;
+  padding: 1.5rem;
   border: 1px solid #1a2f2f;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:hover {
       border: 1px solid #00FF41;
-      transform: scale(1.02);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 255, 65, 0.2);
   }
 
   @media screen and (max-width: 768px) {
@@ -36,61 +40,53 @@ export const ProjectWrapper = styled.div`
   }
 `;
 
-export const LogoWrapper = styled.div`
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+export const Logo = styled.img`
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
 
   @media screen and (max-width: 768px) {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 3rem;
-    height: 3rem;
+    width: 100px;
+    height: 100px;
   }
 `;
 
 export const ProjectTitle = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: #fff;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 
   @media screen and (max-width: 768px) {
     font-size: 1.2rem;
-    font-weight: 200;
-    margin-top: 1rem;
   }
 `;
 
 export const ProjectDescription = styled.div`
-  font-size: 1.15rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: center;
-  margin: 1rem;
+  margin-bottom: 1.5rem;
   color: #ccc;
+  flex-grow: 1;
 
   @media screen and (max-width: 768px) {
     font-size: 0.9rem;
-    line-height: 1.17rem;
-    margin: 0.75rem;
   }
 `;
 
 export const StackContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-
-  @media screen and (max-width: 768px) {
-    margin: 0 20px;
-  }
+  justify-content: center;
 `;
 
 export const StackWrapper = styled.div`
@@ -99,14 +95,10 @@ export const StackWrapper = styled.div`
   border-radius: 0.5rem;
   color: #00FF41;
   padding: 0.15rem 0.75rem;
-  font-size: 16px;
-  margin: 0.75rem;
-
-  @media screen and (max-width: 768px) {
-    padding: 0.15rem 0.75rem;
-    font-size: 14px;
-    margin: 0.25rem;
-  }
+  font-size: 12px;
+  margin: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
 `;
 
 export const Tech = styled.small``;
