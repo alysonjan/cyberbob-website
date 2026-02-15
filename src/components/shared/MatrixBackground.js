@@ -52,7 +52,8 @@ const CyberBackground = () => {
         const animate = () => {
             ctx.clearRect(0, 0, width, height);
 
-            // Subtle Grid
+            // Subtle Grid (Disabled)
+            /*
             ctx.strokeStyle = 'rgba(0, 255, 65, 0.08)';
             ctx.lineWidth = 1;
             const gridSize = 50;
@@ -68,6 +69,7 @@ const CyberBackground = () => {
                 ctx.lineTo(width, y);
                 ctx.stroke();
             }
+            */
 
             particles.forEach((p, i) => {
                 p.update();
