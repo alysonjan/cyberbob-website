@@ -1,6 +1,8 @@
 import React from "react";
 // import { AiOutlineDownload } from "react-icons/ai";
 // import myResume from "../../data/Alyson_Urriza_Jan2025.pdf";
+import { motion } from "framer-motion";
+import { ShieldAlert } from "lucide-react";
 import {
   ButtonContainer,
   Description,
@@ -8,12 +10,12 @@ import {
   HeroContainer,
   HeroWrapper,
   Imagewrapper,
-  Img,
   Name,
   NameContainer,
   // ResumeButton,
   WorkContainer,
   WorkTitle,
+  IconWrapper, // New refined wrapper for icon
 } from "./heroSyles";
 
 const HeroSection = ({
@@ -26,7 +28,11 @@ const HeroSection = ({
   buttonLabel,
 }) => {
   return (
-    <HeroContainer id={id}>
+    <HeroContainer id={id} as={motion.div}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <HeroWrapper>
         <NameContainer>
           <Name>{name}</Name>
@@ -37,7 +43,9 @@ const HeroSection = ({
       </HeroWrapper>
       <DescriptionContainer>
         <Imagewrapper>
-          <Img src={img} alt={alt} />
+          <IconWrapper>
+            <ShieldAlert size={180} color="#00FF41" strokeWidth={1} />
+          </IconWrapper>
         </Imagewrapper>
         <Description>{description}</Description>
       </DescriptionContainer>

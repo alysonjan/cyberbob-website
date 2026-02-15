@@ -1,18 +1,22 @@
-import styled from "styled-components";
-import { Link as LinkScroll } from "react-scroll";
+import styled from 'styled-components';
+import { Link as LinkScroll } from 'react-scroll';
 
 export const Nav = styled.nav`
-  width: 100%;
-  // background: #0b1c2c;
-  background: linear-gradient(to bottom, #0a0f0f, #0e1a1a, #111f1f);
-
+  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 10;
+  transition: 0.8s all ease;
+
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 `;
 
 export const NavbarContainer = styled.div`
@@ -58,18 +62,23 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(LinkScroll)`
   color: #fff;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 4px 1rem 0 1rem;
+  padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  border-bottom: 4px solid rgba(41, 151, 236, 0);
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
 
   &.active {
-    padding-bottom: 0px;
-    border-bottom: 4px solid #2998ec;
-    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid #00FF41;
+    color: #00FF41;
+  }
+  
+  &:hover {
+      color: #00FF41;
+      transition: 0.2s ease-in-out;
   }
 `;

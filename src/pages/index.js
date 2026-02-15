@@ -7,24 +7,30 @@ import Sidebar from '../components/Sidebar'
 import SkillsSection from '../components/SkillsSection'
 import ProjectSection from '../components/ProjectsSection'
 import ContactSection from '../components/ContactSection'
+import ServicesSection from '../components/ServicesSection'
+import Footer from '../components/Footer'
+import MatrixBackground from '../components/shared/MatrixBackground'
 
 
 const Home = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle}/>
+      <MatrixBackground />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection {...HeroInfo} />
       <AboutSection {...AboutInfo} />
       <SkillsSection {...SkillsInfo} />
+      <ServicesSection />
       <ProjectSection {...ProjectInfo} />
       <ContactSection {...ContactInfo} />
+      <Footer />
     </>
   );
 };

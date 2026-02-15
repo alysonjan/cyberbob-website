@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
   width: 100%;
-  background: linear-gradient(to bottom, #0a0f0f, #0e1a1a, #111f1f);
+  background: rgba(10, 15, 15, 0.9);
   padding: 5rem 0;
 `;
 
@@ -19,9 +19,16 @@ export const ProjectWrapper = styled.div`
   width: 30rem;
   height: 24.188rem;
   border-radius: 1.563rem;
-  background: hsl(240, 5.3%, 88.8%);
+  background: #0e1a1a;
   margin: 0.25rem 0.25rem 1.25rem 0.25rem;
   padding: 1rem;
+  border: 1px solid #1a2f2f;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+      border: 1px solid #00FF41;
+      transform: scale(1.02);
+  }
 
   @media screen and (max-width: 768px) {
     width: 22rem;
@@ -29,12 +36,13 @@ export const ProjectWrapper = styled.div`
   }
 `;
 
-export const Logo = styled.img`
-  width: 100px; /* smaller width */
-  height: 100px; /* smaller height */
-  object-fit: cover;
-  display: block; /* to apply margin auto properly */
-  margin: 0 auto; /* center horizontally */
+export const LogoWrapper = styled.div`
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 
   @media screen and (max-width: 768px) {
     width: 5rem;
@@ -51,7 +59,7 @@ export const ProjectTitle = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  color: #2998ec;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: 400;
 
@@ -67,7 +75,7 @@ export const ProjectDescription = styled.div`
   line-height: 1.75rem;
   text-align: center;
   margin: 1rem;
-  color: black;
+  color: #ccc;
 
   @media screen and (max-width: 768px) {
     font-size: 0.9rem;
@@ -86,10 +94,10 @@ export const StackContainer = styled.div`
 `;
 
 export const StackWrapper = styled.div`
-  border: 1px solid #2998ec;
-  background-color: #2e3445;
+  border: 1px solid #00FF41;
+  background-color: transparent;
   border-radius: 0.5rem;
-  color: #ffff;
+  color: #00FF41;
   padding: 0.15rem 0.75rem;
   font-size: 16px;
   margin: 0.75rem;

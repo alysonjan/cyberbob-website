@@ -1,27 +1,23 @@
 export const HeroInfo = {
   id: "home",
   name: "Joshua Bobb Piesta",
-  work: "Cyber Security",
+  work: "Cyber Security Specialist",
   img: require("../images/logo.png"),
-  alt: "mypic",
+  alt: "Joshua Bobb Piesta",
   description:
-    "A passionate Cybersecurity Specialist dedicated to protecting digital assets and ensuring the integrity of information systems. Committed to delivering impactful security solutions, staying ahead of evolving threats, and contributing to a safer digital environment across all sectors.",
-  buttonLabel: "RESUME",
+    "Securing the digital world, one packet at a time. I engineer robust defense systems and execute precision offensive operations to safeguard critical assets. Your security is my mission.",
+  buttonLabel: "VIEW RESUME",
 };
 
 export const AboutInfo = {
   id: "about",
   title: "ABOUT ME",
   img: require("../images/me.png"),
-  alt: "aboutme",
-  description: `I am a dedicated cybersecurity professional with a strong focus on the CIA triad. 
-  My passion lies in protecting systems, 
-  networks, and data from ever-evolving cyber threats. 
-  I believe in proactive defense, continuous improvement, and strategic problem-solving. 
-  Staying current with the latest tools and trends is a core part of my routine. 
-  I’m committed to continuous learning and professional growth. My goal is to create secure digital environments 
-  that empower individuals and organizations. 
-  I aim to make a real impact by turning complex security challenges into effective, reliable solutions.`,
+  alt: "About Joshua",
+  description: `I am a dedicated cybersecurity professional committed to the CIA triad—Confidentiality, Integrity, and Availability. 
+  My expertise bridges the gap between complex security challenges and robust, actionable solutions. 
+  Driven by proactive defense and continuous improvement, I stay ahead of the curve in an ever-changing threat landscape.
+  My mission is to empower organizations with secure digital environments, turning potential vulnerabilities into fortified strengths.`,
 };
 
 export const SkillsInfo = {
@@ -30,22 +26,29 @@ export const SkillsInfo = {
   frontend: [
     {
       img: require("../images/bob/try.png"),
+      name: "TryHackMe",
+      description: "Gamified cyber security training with hands-on labs.",
       percentage: "80%",
       background: "#E44D26",
     },
     {
       img: require("../images/bob/hack.png"),
+      name: "HackTheBox",
+      description: "Advanced penetration testing labs and competitive hacking scenarios.",
       percentage: "60%",
       background: "#2062AF",
     },
     {
       img: require("../images/bob/tcm.png"),
+      name: "TCM Security",
+      description: "Practical ethical hacking certification courses and professional training.",
       percentage: "80%",
       background: "#F0DB4F",
     },
     {
       img: require("../images/bob/web.png"),
-
+      name: "Web Security Academy",
+      description: "Expert-led web application security training by PortSwigger.",
       percentage: "60%",
       background: "#05A5D1",
     },
@@ -53,88 +56,99 @@ export const SkillsInfo = {
   api: [
     {
       img: require("../images/bob/pen.png"),
+      name: "PentesterLab",
+      description: "In-depth web penetration testing exercises and vulnerability learning.",
     },
     {
       img: require("../images/bob/def.png"),
+      name: "LetsDefend",
+      description: "Blue team training platform for SOC analysts and incident responders.",
     },
   ],
   backend: [
     {
       img: require("../images/bob/blue.png"),
+      name: "Blue Team Labs",
+      description: "Gamified defensive cyber security platform for digital forensics and IR.",
       percentage: "90%",
       background: "#80BD01",
     },
     {
       img: require("../images/bob/cyberdef.png"),
+      name: "CyberDefenders",
+      description: "Blue team training with high-quality CTF challenges and diverse labs.",
       percentage: "70%",
       background: "#E10198",
     },
   ],
+  apiDesc: "Offensive & Defensive Tools",
+  frontendDesc: "Platforms & Communities",
+  backendDesc: "Specialized Architectures"
 };
 
 export const ProjectInfo = {
   id: "projects",
-  title: "CERTIFICATES",
+  title: "CERTIFICATIONS",
   projects: [
     {
       img: require("../images/ech.png"),
-      title: "EC-Council Certified Ethical Hacker (CEH)",
+      title: "CEH: Certified Ethical Hacker",
       description:
-        "Validated knowledge of ethical hacking techniques, attack vectors, and preventative countermeasures to assess and secure systems.",
-      stack: ["Ethical Hacking", "Penetration Testing", "Network Security"],
+        "Mastered advanced attack vectors and countermeasures. Validated proficiency in scanning, enumeration, and system hacking to secure perimeters.",
+      stack: ["Penetration Testing", "Ethical Hacking", "System Security"],
     },
     {
       img: require("../images/comptia.png"),
       title: "CompTIA Security+",
       description:
-        "Established foundational cybersecurity skills including threat management, risk mitigation, and network security concepts.",
-      stack: ["Risk Management", "Threats", "Vulnerabilities"],
+        "Solidified core competencies in risk management and threat mitigation. Demonstrated ability to secure networks and devices.",
+      stack: ["Risk Mitigation", "Threat Analysis", "Network Security"],
     },
     {
       img: require("../images/isc2.png"),
-      title: "(ISC)² Certified in Cybersecurity (CC)",
+      title: "(ISC)² Certified in Cybersecurity",
       description:
-        "Demonstrated core knowledge of cybersecurity principles, including security operations, network and system security, and access control.",
-      stack: ["Security Principles", "Access Control", "Network Security"],
+        "Verified expertise in security principles, business continuity, disaster recovery, and incident response operations.",
+      stack: ["Incident Response", "Access Control", "Security Ops"],
     },
     {
       img: require("../images/blueteam.png"),
-      title: "Security Blue Team Certified - Blue Team Level 1 (BTL1)",
+      title: "BTL1: Blue Team Level 1",
       description:
-        "Proven skills in defensive security operations, incident response, threat intelligence, and network monitoring.",
-      stack: ["Blue Teaming", "Threat Detection", "SOC Operations"],
+        "Proven defender with hands-on skills in SIEM, phishing analysis, and digital forensics. Capable of detecting and responding to live threats.",
+      stack: ["Digital Forensics", "Threat Hunting", "SIEM"],
     },
     {
       img: require("../images/aws.png"),
       title: "AWS Certified Cloud Practitioner",
       description:
-        "Recognized understanding of cloud computing concepts, AWS services, and security best practices for cloud environments.",
-      stack: ["AWS", "Cloud Fundamentals", "Security Best Practices"],
+        "Validated understanding of the AWS Cloud platform, including security, compliance, and the shared responsibility model.",
+      stack: ["Cloud Security", "AWS Services", "Compliance"],
     },
     {
       img: require("../images/tryhackme.png"),
-      title: "TryHackMe Security Analyst Level 1 (SAL1)",
+      title: "TryHackMe Security Analyst L1",
       description:
-        "Hands-on experience in real-world cybersecurity scenarios, focusing on SOC analysis, threat hunting, and basic forensics.",
-      stack: ["SOC Analysis", "Threat Hunting", "Forensics"],
+        "Practical experience in SOC operations. Skilled in analyzing logs, investigating alerts, and utilizing industry-standard security tools.",
+      stack: ["SOC Operations", "Log Analysis", "Traffic Analysis"],
     },
   ],
 };
 
 export const ContactInfo = {
   id: "contact",
-  title: "CONTACT",
+  title: "GET IN TOUCH",
   email: "joshuapiesta@gmail.com",
   emailLogo: require("../images/email.png"),
   socials: [
     {
       img: require("../images/medium.png"),
-      alt: "medium",
+      alt: "Medium",
       link: "https://medium.com/@joshuapiesta",
     },
     {
       img: require("../images/linkedin.png"),
-      alt: "linkedin",
+      alt: "LinkedIn",
       link: "https://www.linkedin.com/in/jpiesta/",
     },
   ],
