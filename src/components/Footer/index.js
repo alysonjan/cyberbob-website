@@ -18,7 +18,7 @@ const Footer = () => {
                     <Shield size={40} color="#00FF41" />
                 </FooterLogo>
                 <FooterTagline>
-                    Securing the shadows, protecting the light. Joshua Bobb Piesta — Cybersecurity Enthusiast & Professional.
+                    Joshua Bobb Piesta | Securing Digital Frontiers.
                 </FooterTagline>
                 <SocialIcons>
                     <SocialIconLink href="https://www.linkedin.com/in/jpiesta/" target="_blank" aria-label="LinkedIn">
