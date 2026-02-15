@@ -1,7 +1,7 @@
 export const HeroInfo = {
   id: "home",
   name: "Joshua Bobb Piesta",
-  work: "Cyber Security Specialist",
+  work: "Penetration Tester",
   img: require("../images/logo.png"),
   alt: "Joshua Bobb Piesta",
   description:
@@ -14,7 +14,7 @@ export const AboutInfo = {
   title: "ABOUT ME",
   img: require("../images/me.png"),
   alt: "About Joshua",
-  description: `I am a dedicated cybersecurity professional committed to the CIA triad—Confidentiality, Integrity, and Availability. 
+  description: `I am a dedicated Penetration Tester committed to the CIA triad—Confidentiality, Integrity, and Availability. 
   My expertise bridges the gap between complex security challenges and robust, actionable solutions. 
   Driven by proactive defense and continuous improvement, I stay ahead of the curve in an ever-changing threat landscape.
   My mission is to empower organizations with secure digital environments, turning potential vulnerabilities into fortified strengths.`,
