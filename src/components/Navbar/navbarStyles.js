@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
+  background: ${({ scrollNav }) => (scrollNav ? 'rgba(0, 0, 0, 0.9)' : 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -11,6 +11,8 @@ export const Nav = styled.nav`
   font-size: 1rem;
   position: sticky;
   top: 0;
+  width: 100%;
+  left: 0;
   z-index: 10;
   transition: 0.8s all ease;
 
@@ -19,8 +21,8 @@ export const Nav = styled.nav`
     height: 60px;
     margin-top: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black for better contrast */
-    backdrop-filter: blur(5px);
+    background: transparent; /* Transparent as requested */
+    backdrop-filter: none;
   }
 `;
 
@@ -45,12 +47,12 @@ export const MobileIcon = styled.div`
     display: block;
     position: absolute;
     top: 50%;
-    right: 24px;
+    right: 24px; /* Positions it on the right */
     transform: translateY(-50%);
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
-    z-index: 20; /* Ensure it is above other navbar elements */
+    z-index: 20;
   }
 `;
 

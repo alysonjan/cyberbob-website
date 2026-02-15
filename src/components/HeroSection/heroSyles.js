@@ -39,7 +39,7 @@ export const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
-  background: rgba(10, 15, 15, 0.85); /* Slightly more transparent */
+  background: transparent;
   padding-top: 60px; /* Offset for fixed navbar */
 
   @media screen and (max-width: 768px) {

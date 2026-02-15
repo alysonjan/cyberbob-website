@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   width: 100%;
   height: auto;
-  background: rgba(10, 15, 15, 0.9);
+  background: transparent;
   padding: 5rem 0;
 `;
 

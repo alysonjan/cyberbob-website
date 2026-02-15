@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
   width: 100%;
-  background: rgba(10, 15, 15, 0.9);
+  background: transparent;
   padding: 5rem 0;
 `;
 
@@ -19,7 +19,8 @@ export const ProjectWrapper = styled.div`
   width: 30rem;
   height: 25rem; /* Adjusted height for images */
   border-radius: 1.563rem;
-  background: #0e1a1a;
+  background: rgba(14, 26, 26, 0.4);
+  backdrop-filter: blur(4px);
   margin: 0.25rem 0.25rem 1.25rem 0.25rem;
   padding: 1.5rem;
   border: 1px solid #1a2f2f;
@@ -60,6 +61,7 @@ export const ProjectTitle = styled.div`
   justify-content: center;
   margin-bottom: 1rem;
   color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AboutContainer = styled.div`
   width: 100%;
   height: auto;
-  background: rgba(10, 15, 15, 0.9);
+  background: transparent;
   padding: 5rem 0;
 `;
 
@@ -27,7 +27,7 @@ export const AvatarContainer = styled.div`
   width: 25rem;
   height: 25rem;
   border-radius: 50%;
-  background: #0e1a1a;
+  background: rgba(14, 26, 26, 0.4);
   border: 1px solid #1a2f2f;
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
   transition: all 0.3s ease-in-out;
@@ -61,6 +61,7 @@ export const Description = styled.div`
   text-align: center;
   line-height: 2.25rem;
   color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   font-family: 'Courier New', Courier, monospace; /* Consistent with hacking theme */
 
   @media screen and (max-width: 768px) {

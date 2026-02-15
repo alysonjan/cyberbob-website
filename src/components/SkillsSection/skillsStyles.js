@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SkillsContainer = styled.div`
   width: 100%;
-  background: rgba(10, 15, 15, 0.9);
+  background: transparent;
   padding: 5rem 0;
 `;
 
@@ -28,7 +28,8 @@ export const SkillWrapper = styled.div`
   padding: 2.5rem 2rem;
   width: 320px;
   min-height: 320px;
-  background: #0e1a1a;
+  background: rgba(14, 26, 26, 0.4);
+  backdrop-filter: blur(4px);
   border-radius: 12px;
   border: 1px solid #1a2f2f;
   transition: all 0.3s ease-in-out;

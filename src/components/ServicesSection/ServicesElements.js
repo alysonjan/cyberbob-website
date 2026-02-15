@@ -6,7 +6,7 @@ export const ServicesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(10, 15, 15, 0.9);
+  background: transparent;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -37,7 +37,8 @@ export const ServicesWrapper = styled.div`
 `;
 
 export const ServicesCard = styled.div`
-  background: #0e1a1a;
+  background: rgba(14, 26, 26, 0.4); /* Glassmorphism effect */
+  backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -1,63 +1,122 @@
 import React, { useRef, useEffect } from 'react';
 
-const MatrixBackground = () => {
+const CyberBackground = () => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
+        let width, height;
+        let particles = [];
+        const particleCount = 80;
+        const connectionDistance = 150;
 
-        const columns = Math.floor(width / 20) + 1;
-        const yPositions = Array(columns).fill(0);
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+            }
 
-        ctx.fillStyle = '#000';
-        ctx.fillRect(0, 0, width, height);
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
 
-        const matrix = () => {
-            // Darken the background slightly to create the trail effect
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, width, height);
+                if (this.x < 0 || this.x > width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > height) this.vy = -this.vy;
+            }
 
-            ctx.fillStyle = '#00FF41'; // Hacker Green
-            ctx.font = '14pt "Courier New", Courier, monospace'; // Monospace font for binaries
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0, 255, 65, 0.8)';
+                ctx.fill();
+            }
+        }
 
-            yPositions.forEach((y, index) => {
-                // Randomly choose 0 or 1
-                const text = Math.random() > 0.5 ? '1' : '0';
+        const resize = () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            init();
+        };
 
-                const x = index * 20;
-                ctx.fillText(text, x, y);
+        const init = () => {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        };
 
-                // Randomly reset the drop to the top
-                if (y > height && Math.random() > 0.975) {
-                    yPositions[index] = 0;
-                } else {
-                    yPositions[index] = y + 20;
+        const animate = () => {
+            ctx.clearRect(0, 0, width, height);
+
+            // Subtle Grid
+            ctx.strokeStyle = 'rgba(0, 255, 65, 0.08)';
+            ctx.lineWidth = 1;
+            const gridSize = 50;
+            for (let x = 0; x < width; x += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < height; y += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(width, y);
+                ctx.stroke();
+            }
+
+            particles.forEach((p, i) => {
+                p.update();
+                p.draw();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(0, 255, 65, ${1 - dist / connectionDistance})`;
+                        ctx.globalAlpha = 0.4;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
                 }
             });
+
+            requestAnimationFrame(animate);
         };
 
-        const interval = setInterval(matrix, 50);
-
-        const handleResize = () => {
-            width = window.innerWidth;
-            height = window.innerHeight;
-            canvas.width = width;
-            canvas.height = height;
-        };
-
-        window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', resize);
+        resize();
+        animate();
 
         return () => {
-            clearInterval(interval);
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', resize);
         };
     }, []);
 
-    // Increased opacity for better visibility
-    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, opacity: 0.2 }} />;
+    return (
+        <canvas
+            ref={canvasRef}
+            style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                zIndex: -1,
+                background: '#010606',
+                pointerEvents: 'none'
+            }}
+        />
+    );
 };
 
-export default MatrixBackground;
+export default CyberBackground;

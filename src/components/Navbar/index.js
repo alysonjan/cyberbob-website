@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { Menu } from "lucide-react";
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import {
@@ -34,7 +34,7 @@ const Navbar = ({ toggle }) => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <MobileIcon onClick={toggle}>
-            <FaBars />
+            <Menu size={32} />
           </MobileIcon>
           <NavMenu>
             <NavItem>
