@@ -12,7 +12,7 @@ import {
   StackWrapper,
   Tech,
 } from "./projectStyles";
-import { Shield, BookOpen, Lock, Server, Cloud, Cpu, FileCode, CheckCircle, Award } from "lucide-react";
+import { Shield, BookOpen, Lock, Server, Cloud, Cpu, FileCode, Award } from "lucide-react";
 
 const getIconForProject = (title) => {
   const lowerTitle = title.toLowerCase();
